@@ -17,6 +17,7 @@ namespace EfDataAccess.Configurations
                 .HasDefaultValueSql("GETDATE()");
             builder.HasIndex(e => e.Name)
                 .IsUnique();
+
             builder.HasMany(e => e.CarEquipment)
                 .WithOne(ce => ce.Equipment)
                 .HasForeignKey(ce => ce.EquipmentId)

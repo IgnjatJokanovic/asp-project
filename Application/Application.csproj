@@ -5,8 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj" />
-    <ProjectReference Include="..\EfDataAccess\EfDataAccess.csproj" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Searches\" />
+    <Folder Include="Responses\" />
   </ItemGroup>
 
 </Project>
