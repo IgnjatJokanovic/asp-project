@@ -7,7 +7,7 @@ using System.Text;
 
 namespace EfDataAccess
 {
-    class ProjectContext : DbContext
+    public class ProjectContext : DbContext
     {
         public DbSet<Role> Roles { get; set; }
 
