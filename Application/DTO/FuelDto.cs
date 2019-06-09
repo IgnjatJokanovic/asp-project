@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Application.DTO
 {
-    public class TransmissionDto
+    public class FuelDto
     {
         public int Id { get; set; }
         [Required(ErrorMessage ="Field Type is required")]

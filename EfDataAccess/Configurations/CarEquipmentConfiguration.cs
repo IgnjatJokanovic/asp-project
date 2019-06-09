@@ -12,6 +12,9 @@ namespace EfDataAccess.Configurations
         public void Configure(EntityTypeBuilder<CarEquipment> builder)
         {
             builder.HasKey(ce => new { ce.CarId, ce.EquipmentId });
+            builder.ToTable("CarEquipment");
         }
+
+
     }
 }

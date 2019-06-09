@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfDataAccess", "EfDataAcces
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCommands", "EfCommands\EfCommands.csproj", "{3F99EA28-7293-4921-A8F2-61B327FADFBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{D9E93FFB-A393-4A0A-B1F8-937672C62A31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{D9E93FFB-A393-4A0A-B1F8-937672C62A31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{C1F2508F-4D83-49C6-99CA-AD01AE7D5FAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D9E93FFB-A393-4A0A-B1F8-937672C62A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9E93FFB-A393-4A0A-B1F8-937672C62A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9E93FFB-A393-4A0A-B1F8-937672C62A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1F2508F-4D83-49C6-99CA-AD01AE7D5FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1F2508F-4D83-49C6-99CA-AD01AE7D5FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F2508F-4D83-49C6-99CA-AD01AE7D5FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F2508F-4D83-49C6-99CA-AD01AE7D5FAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Commands
+namespace Application.Commands.TransmissionCommands
 {
-    public interface IDeleteEngineCommand : ICommand<EngineDto>
+    public interface IEditTrasnmissionCommand : ICommand<TransmissionDto>
     {
     }
 }

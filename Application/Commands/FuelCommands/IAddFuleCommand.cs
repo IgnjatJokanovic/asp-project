@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Commands
+namespace Application.Commands.FuelCommands
 {
-    public interface IDeleteEquipmentCommand : ICommand<EquipmentDto>
+    public interface IAddFuleCommand : ICommand<FuelDto>
     {
     }
 }
