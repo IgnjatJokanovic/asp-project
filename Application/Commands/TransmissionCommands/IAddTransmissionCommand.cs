@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Commands
+namespace Application.Commands.TransmissionCommands
 {
-    public interface IGetCarCommand : ICommand<CarDto>
+    public interface IAddTransmissionCommand : ICommand<TransmissionDto>
     {
     }
 }

@@ -16,6 +16,16 @@ namespace Application.DTO
         public string Src { get; set; }
 
         public string Alt { get; set; }
+        [Required(ErrorMessage = "Field Engine is required")]
+        public int EngineId { get; set; }
+        [Required(ErrorMessage = "Field Model is required")]
+        public int ModelId { get; set; }
+        [Required(ErrorMessage = "Field Fuel is required")]
+        public int FuelId { get; set; }
+        [Required(ErrorMessage = "Field Transmission is required")]
+        public int TransmissionId { get; set; }
+
+        public ICollection<EquipmentDto> Equipment { get; set; } = new List<EquipmentDto> ();
 
         public IEnumerable<string> EquipmentNames { get; set; }
     }

@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Commands
+namespace Application.Commands.UserCommands
 {
-    public interface IGetEngineCommand : ICommand<EngineDto>
+    public interface IAddUserCommand : ICommand<UserDto>
     {
     }
 }
