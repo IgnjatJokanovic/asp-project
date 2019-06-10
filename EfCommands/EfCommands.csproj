@@ -9,13 +9,4 @@
     <ProjectReference Include="..\EfDataAccess\EfDataAccess.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="EngineCommands\" />
-    <Folder Include="EquipmentCommands\" />
-    <Folder Include="FuelCommands\" />
-    <Folder Include="ModelCommands\" />
-    <Folder Include="UserCommands\" />
-    <Folder Include="TransmissionCommands\" />
-  </ItemGroup>
-
 </Project>

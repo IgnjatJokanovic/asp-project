@@ -11,6 +11,6 @@ namespace Application.Interfaces
 
     public interface ICommand<TRequest, TResult>
     {
-        void Execute(TRequest request);
+        TResult Execute(TRequest request);
     }
 }

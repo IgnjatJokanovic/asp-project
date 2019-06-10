@@ -3,7 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands;
+using Application.Commands.FuelCommands;
+using Application.Commands.ModelCommands;
+using Application.Commands.TransmissionCommands;
+using Application.Commands.UserCommands;
 using EfCommands.CarCommands;
+using EfCommands.EngineCommands;
+using EfCommands.EquipmentCommands;
+using EfCommands.FuelCommands;
+using EfCommands.ModelCommands;
+using EfCommands.TransmissionCommands;
+using EfCommands.UserCommands;
 using EfDataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,7 +40,52 @@ namespace Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<ProjectContext>();
+            //CAR COMMANDS
             services.AddTransient<IAddCarCommand, EfAddCarCommand>();
+            services.AddTransient<IEditCarCommand, EfEditCarCommand>();
+            services.AddTransient<IDeleteCarCommand, EfDeleteCarCommand>();
+            services.AddTransient<IGetCarCommand, EfGetCarCommand>();
+            services.AddTransient<IGetCarsCommand, EfGetCarsCommand>();
+            //Engine Commands
+            services.AddTransient<IAddEngineCommand, EfAddEngineCommand>();
+            services.AddTransient<IEditEngineCommand, EfEditEngineCommand>();
+            services.AddTransient<IDeleteEngineCommand, EfDeleteEngineCommand>();
+            services.AddTransient<IGetEngineCommand, EfGetEngineCommand>();
+            services.AddTransient<IGetEngineCommand, EfGetEngineCommand>();
+            //EquipmentCommands
+            services.AddTransient<IAddEquipmentCommand, EfAddEquipmentCommand>();
+            services.AddTransient<IEditEquipmentCommand, EfEditEquipmentCommand>();
+            services.AddTransient<IDeleteEquipmentCommand, EfDeleteEquipmentCommand>();
+            services.AddTransient<IGetEquipmentCommand, EfGetEquipmentCommand>();
+            services.AddTransient<IGetEquipmentCommand, EfGetEquipmentCommand>();
+            //FuelCommands
+            services.AddTransient<IAddFuelCommand, EfAddFuelCommand>();
+            services.AddTransient<IEditFuelCommand, EfEditFuelCommand>();
+            services.AddTransient<IDeleteFuelCommand, EfDeleteFuelCommand>();
+            services.AddTransient<IGetFuelCommand, EfGetFuelCommand>();
+            services.AddTransient<IGetFuelsCommand, EfGetFuelsCommand>();
+            //MOdelCommnads
+            services.AddTransient<IAddModelCommand, EfAddModelCommand>();
+            services.AddTransient<IEditModelCommand, EfEditModelCommand>();
+            services.AddTransient<IDeleteModelCommand, EfDeleteModelCommand>();
+            services.AddTransient<IGetModelCommand, EfGetModelCommand>();
+            services.AddTransient<IGetModelsCommand, EfGetModelsCommand>();
+            //User Commands
+
+            services.AddTransient<IAddUserCommand, EfAddUserCommand>();
+            services.AddTransient<IEditModelCommand, EfEditModelCommand>();
+            services.AddTransient<IDeleteModelCommand, EfDeleteModelCommand>();
+            services.AddTransient<IGetModelCommand, EfGetModelCommand>();
+            services.AddTransient<IGetModelsCommand, EfGetModelsCommand>();
+            //Transmission Commands
+            services.AddTransient<IAddTransmissionCommand, EfAddTransmissionCommand>();
+            services.AddTransient<IEditTransmissionCommand, EfEditTransmissionCommand>();
+            services.AddTransient<IDeleteTransmissionCommand, EfDeleteTransmissionCommand>();
+            services.AddTransient<IGetTransmissionCommand, EfGetTransmissionCommand>();
+            services.AddTransient<IGetTransmissionsCommand, EfGetTransmissionsCommand>();
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

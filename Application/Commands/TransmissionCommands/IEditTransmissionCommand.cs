@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Application.Commands.TransmissionCommands
 {
-    public interface IEditTrasnmissionCommand : ICommand<TransmissionDto>
+    public interface IEditTransmissionCommand : ICommand<TransmissionDto>
     {
     }
 }
