@@ -34,6 +34,8 @@ namespace EfCommands.CarCommands
             foreach (EquipmentDto dto in request.Equipment)
             {
                 var equipment = Context.Equipment.Find(dto.Id);
+                if (equipment == null)
+                    throw new EntityNotFoundException("Equipment");
                 var CarEquipment = new CarEquipment();
                 CarEquipment.Equipment = equipment;
                 car.CarEquipment.Add(CarEquipment);

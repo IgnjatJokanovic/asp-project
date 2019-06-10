@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Application.Commands.FuelCommands
 {
-    public interface IAddFuleCommand : ICommand<FuelDto>
+    public interface IAddFuelCommand : ICommand<FuelDto>
     {
     }
 }
