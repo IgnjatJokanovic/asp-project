@@ -1,8 +1,10 @@
 ﻿using Application.Commands.ModelCommands;
 using Application.DTO;
+using Application.Searches;
 using EfDataAccess;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace EfCommands.ModelCommands
@@ -13,9 +15,17 @@ namespace EfCommands.ModelCommands
         {
         }
 
-        public void Execute(IEnumerable<ModelDto> request)
+        public IEnumerable<ModelSHow> Execute(ModelSearch request)
         {
-            throw new NotImplementedException();
+            var models = Context.Models.AsQueryable();
+            if (request.Name != null)
+                models.Where(m => m.Name.ToLower() == request.Name.ToLower());
+            return models.Select(m => new ModelSHow
+            {
+                Id = m.Id,
+                Name = m.Name
+            });
+
         }
     }
 }

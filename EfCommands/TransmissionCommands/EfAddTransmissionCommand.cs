@@ -1,9 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using Application.Commands;
+using Application.Commands.FuelCommands;
+using Application.Commands.ModelCommands;
 using Application.Commands.TransmissionCommands;
 using Application.DTO;
+using Application.Exceptions;
+using Application.Searches;
+using Domain;
 using EfDataAccess;
+
 
 namespace EfCommands.TransmissionCommands
 {
@@ -15,7 +23,13 @@ namespace EfCommands.TransmissionCommands
 
         public void Execute(TransmissionDto request)
         {
-            throw new NotImplementedException();
+            var trans = new Transmission();
+            if (Context.Transmissions.Any(t => t.Type.ToLower() == t.Type.ToLower()))
+                throw new EntityAlreadyExistsException("Transmission");
+            trans.Type = request.Type;
+            Context.Transmissions.Add(trans);
+            Context.SaveChanges();
+            
         }
     }
 }

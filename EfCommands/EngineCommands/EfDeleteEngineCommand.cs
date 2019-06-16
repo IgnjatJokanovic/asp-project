@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Application.Commands;
+using Application.Exceptions;
 using EfDataAccess;
 
 namespace EfCommands.EngineCommands
@@ -14,7 +15,11 @@ namespace EfCommands.EngineCommands
 
         public void Execute(int request)
         {
-            throw new NotImplementedException();
+            var engine = Context.Engines.Find(request);
+            if (engine == null)
+                throw new EntityNotFoundException("Engine");
+            Context.Engines.Remove(engine);
+            Context.SaveChanges();
         }
     }
 }

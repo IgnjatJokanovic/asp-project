@@ -27,6 +27,5 @@ namespace Application.DTO
 
         public ICollection<EquipmentDto> Equipment { get; set; } = new List<EquipmentDto> ();
 
-        public IEnumerable<string> EquipmentNames { get; set; }
     }
 }

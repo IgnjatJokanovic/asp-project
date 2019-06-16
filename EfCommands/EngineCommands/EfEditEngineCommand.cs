@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Application.Commands;
 using Application.DTO;
+using Application.Exceptions;
 using EfDataAccess;
 
 namespace EfCommands.EngineCommands
@@ -15,7 +17,12 @@ namespace EfCommands.EngineCommands
 
         public void Execute(EngineDto request)
         {
-            throw new NotImplementedException();
+            var engine = Context.Engines.Find(request.Id);
+            if (Context.Engines.Any(e => e.Name.ToLower() == request.Name.ToLower()))
+                throw new EntityAlreadyExistsException("Engine");
+            engine.Name = request.Name;
+            engine.CC = request.CC;
+            Context.SaveChanges();
         }
     }
 }

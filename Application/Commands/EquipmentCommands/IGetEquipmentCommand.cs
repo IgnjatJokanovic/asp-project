@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Application.Commands
 {
-    public interface IGetEquipmentCommand : ICommand<int, EquipmentDto>
+    public interface IGetEquipmentCommand : ICommand<int, EquipmentShow>
     {
     }
 }

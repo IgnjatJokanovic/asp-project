@@ -1,12 +1,13 @@
 ﻿using Application.DTO;
 using Application.Interfaces;
+using Application.Searches;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Application.Commands.TransmissionCommands
 {
-    public interface IGetTransmissionsCommand : ICommand<IEnumerable<TransmissionDto>>
+    public interface IGetTransmissionsCommand : ICommand<TransmissionSearch, IEnumerable<TransmissionShow>>
     {
     }
 }

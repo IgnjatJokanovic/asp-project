@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Application.Commands.TransmissionCommands
 {
-    public interface IGetTransmissionCommand : ICommand<int, FuelDto>
+    public interface IGetTransmissionCommand : ICommand<int, TransmissionShow>
     {
     }
 }

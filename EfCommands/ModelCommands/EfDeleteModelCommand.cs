@@ -1,7 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Linq;
 using System.Text;
+using Application.Commands;
+using Application.Commands.FuelCommands;
 using Application.Commands.ModelCommands;
+using Application.DTO;
+using Application.Exceptions;
+using Application.Searches;
+using Domain;
 using EfDataAccess;
 
 namespace EfCommands.ModelCommands
@@ -14,7 +19,11 @@ namespace EfCommands.ModelCommands
 
         public void Execute(int request)
         {
-            throw new NotImplementedException();
+            var model = Context.Models.Find(request);
+            if (model == null)
+                throw new EntityNotFoundException("Model");
+            Context.Models.Remove(model);
+            Context.SaveChanges();
         }
     }
 }

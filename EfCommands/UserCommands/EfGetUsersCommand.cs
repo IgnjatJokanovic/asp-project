@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Application.Commands.UserCommands;
 using Application.DTO;
+using Application.Searches;
 using EfDataAccess;
 
 namespace EfCommands.UserCommands
@@ -13,7 +14,7 @@ namespace EfCommands.UserCommands
         {
         }
 
-        public void Execute(IEnumerable<UserDto> request)
+        public IEnumerable<UserShow> Execute(UserSearch request)
         {
             throw new NotImplementedException();
         }

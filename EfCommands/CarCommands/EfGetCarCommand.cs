@@ -16,8 +16,9 @@ namespace EfCommands.CarCommands
         {
         }
 
-        public CarDto Execute(int request)
+        public CarShowDto Execute(int request)
         {
+
             var car = Context.Cars
                         .Include(c => c.Engine)
                         .Include(c => c.Model)
@@ -28,9 +29,19 @@ namespace EfCommands.CarCommands
                         .FirstOrDefault(c => c.Id == request);
             if (car == null)
                 throw new EntityNotFoundException("Car");
-            return new CarDto
+
+            return new CarShowDto
             {
-                
+                Id = car.Id,
+                Name = car.Name,
+                Src = car.Src,
+                Alt = car.Alt,
+                Price = car.Price,
+                Engine = car.Engine.Name,
+                Fuel = car.Fuel.Type,
+                Model = car.Model.Name,
+                Transmission = car.Transmission.Type,
+                EquipmentNames = car.CarEquipment.Select(ce => ce.Equipment.Name)
             };
         }
     }
