@@ -28,7 +28,7 @@ namespace EfDataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DEV_OPS-PC\SQLEXPRESS;Initial Catalog=car_dealership;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=DEV_OPS-PC\SQLEXPRESS;Initial Catalog=database1;Integrated Security=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Application.Commands.ModelCommands
 {
-    public interface IGetModelCommand : ICommand<int, ModelDto>
+    public interface IGetModelCommand : ICommand<int, ModelSHow>
     {
     }
 }

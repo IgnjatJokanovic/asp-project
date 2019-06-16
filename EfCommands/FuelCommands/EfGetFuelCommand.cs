@@ -1,9 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using Application.Commands;
 using Application.Commands.FuelCommands;
 using Application.DTO;
+using Application.Exceptions;
+using Application.Searches;
+using Domain;
 using EfDataAccess;
+
 
 namespace EfCommands.FuelCommands
 {
@@ -13,9 +19,16 @@ namespace EfCommands.FuelCommands
         {
         }
 
-        public FuelDto Execute(int request)
+        public FuelShow Execute(int request)
         {
-            throw new NotImplementedException();
+            var fuel = Context.Fuels.Find(request);
+            if (fuel == null)
+                throw new EntityNotFoundException("Fuel");
+            return new FuelShow
+            {
+                Id = fuel.Id,
+                Type = fuel.Type
+            };
         }
     }
 }

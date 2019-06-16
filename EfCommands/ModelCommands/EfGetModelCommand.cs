@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Application.Commands.ModelCommands;
 using Application.DTO;
+using Application.Exceptions;
 using EfDataAccess;
 
 namespace EfCommands.ModelCommands
@@ -13,9 +14,16 @@ namespace EfCommands.ModelCommands
         {
         }
 
-        public ModelDto Execute(int request)
+        public ModelSHow Execute(int request)
         {
-            throw new NotImplementedException();
+            var model = Context.Models.Find(request);
+            if (model == null)
+                throw new EntityNotFoundException("Model");
+            return new ModelSHow
+            {
+                Id = model.Id,
+                Name = model.Name
+            };
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Application.Commands
 {
-    public interface IGetCarCommand : ICommand<int, CarDto>
+    public interface IGetCarCommand : ICommand<int, CarShowDto>
     {
     }
 }

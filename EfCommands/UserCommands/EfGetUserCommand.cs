@@ -13,7 +13,7 @@ namespace EfCommands.UserCommands
         {
         }
 
-        public UserDto Execute(int request)
+        public UserShow Execute(int request)
         {
             throw new NotImplementedException();
         }

@@ -13,7 +13,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{C1F2508F-4D83-49C6-99CA-AD01AE7D5FAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{627F1979-ADC5-4817-BA65-216C7700E6ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "Web\Web.csproj", "{627F1979-ADC5-4817-BA65-216C7700E6ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dokumentacija", "Dokumentacija", "{2A5ED43A-AEB1-49B7-AA22-E2A032271E7F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\ASP-DOC.pdf = ..\..\..\Desktop\ASP-DOC.pdf
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBSeeder", "DBSeeder\DBSeeder.csproj", "{B296BA0D-67C2-4793-B98D-6695B0117617}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +52,10 @@ Global
 		{627F1979-ADC5-4817-BA65-216C7700E6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{627F1979-ADC5-4817-BA65-216C7700E6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{627F1979-ADC5-4817-BA65-216C7700E6ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B296BA0D-67C2-4793-B98D-6695B0117617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B296BA0D-67C2-4793-B98D-6695B0117617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B296BA0D-67C2-4793-B98D-6695B0117617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B296BA0D-67C2-4793-B98D-6695B0117617}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

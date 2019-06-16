@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Application.Commands.UserCommands
 {
-    public interface IGetUserCommand : ICommand<int, UserDto>
+    public interface IGetUserCommand : ICommand<int, UserShow>
     {
     }
 }

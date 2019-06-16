@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Application.Commands;
 using Application.DTO;
+using Application.Exceptions;
 using Application.Interfaces;
 using EfDataAccess;
+using Microsoft.EntityFrameworkCore;
 
 namespace EfCommands.EngineCommands
 {
@@ -14,9 +17,18 @@ namespace EfCommands.EngineCommands
         {
         }
 
-        public EngineDto Execute(int request)
+        public EngineShow Execute(int request)
         {
-            throw new NotImplementedException();
+            var engine = Context.Engines.Find(request);
+            if (engine == null)
+                throw new EntityNotFoundException("Engine");
+
+            return new EngineShow
+            {
+                Id = engine.Id,
+                Name = engine.Name,
+                CC = engine.CC
+            };
         }
     }
 }

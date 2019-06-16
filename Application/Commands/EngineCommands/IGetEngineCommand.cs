@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Application.Commands
 {
-    public interface IGetEngineCommand : ICommand<int, EngineDto>
+    public interface IGetEngineCommand : ICommand<int, EngineShow>
     {
     }
 }

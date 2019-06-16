@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Application.Commands;
 using Application.DTO;
+using Application.Exceptions;
+using Domain;
 using EfDataAccess;
 
 namespace EfCommands.EquipmentCommands
@@ -13,9 +16,17 @@ namespace EfCommands.EquipmentCommands
         {
         }
 
-        public EquipmentDto Execute(int request)
+        public EquipmentShow Execute(int request)
         {
-            throw new NotImplementedException();
+            var equipment = Context.Equipment.Find(request);
+            if (equipment == null)
+                throw new EntityNotFoundException("Equipment");
+            return new EquipmentShow
+            {
+                Id = equipment.Id,
+                Name = equipment.Name
+            };
+
         }
     }
 }
